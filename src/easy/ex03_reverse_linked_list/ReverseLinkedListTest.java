@@ -1,9 +1,12 @@
 package easy.ex03_reverse_linked_list;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 import easy.ex03_reverse_linked_list.ReverseLinkedList.ListNode;
 
 public class ReverseLinkedListTest {
+    @Test
     public void testMultipleNodes() {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, null))));
         ListNode rev = ReverseLinkedList.reverseList(head);
@@ -14,6 +17,7 @@ public class ReverseLinkedListTest {
         TestRunner.assertNull(rev.next.next.next.next);
     }
 
+    @Test
     public void testSingleAndNull() {
         TestRunner.assertNull(ReverseLinkedList.reverseList(null));
         ListNode single = new ListNode(42);

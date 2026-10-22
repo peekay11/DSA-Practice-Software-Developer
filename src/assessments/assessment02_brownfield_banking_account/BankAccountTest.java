@@ -1,8 +1,11 @@
 package assessments.assessment02_brownfield_banking_account;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class BankAccountTest {
+    @Test
     public void testValidTransactions() {
         BankAccount account = new BankAccount("ACC-101", 100.0);
         account.deposit(50.0);
@@ -13,6 +16,7 @@ public class BankAccountTest {
         TestRunner.assertEquals(115.0, account.getBalance(), 1e-4, "Balance after withdraw + fee");
     }
 
+    @Test
     public void testDefensiveRejection() {
         BankAccount account = new BankAccount("ACC-102", 50.0);
         try {

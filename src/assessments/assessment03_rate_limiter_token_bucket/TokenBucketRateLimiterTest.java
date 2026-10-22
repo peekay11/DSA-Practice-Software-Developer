@@ -1,8 +1,11 @@
 package assessments.assessment03_rate_limiter_token_bucket;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class TokenBucketRateLimiterTest {
+    @Test
     public void testAcquisitionWithinCapacity() {
         TokenBucketRateLimiter limiter = new TokenBucketRateLimiter(5.0, 1.0);
         TestRunner.assertTrue(limiter.tryAcquire(3), "First 3 should succeed");

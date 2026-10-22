@@ -1,8 +1,11 @@
 package medium.ex11_product_except_self;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class ProductExceptSelfTest {
+    @Test
     public void testStandard() {
         int[] nums = {1, 2, 3, 4};
         int[] res = ProductExceptSelf.productExceptSelf(nums);
@@ -13,6 +16,7 @@ public class ProductExceptSelfTest {
         }
     }
 
+    @Test
     public void testWithZeroes() {
         int[] nums = {-1, 1, 0, -3, 3};
         int[] res = ProductExceptSelf.productExceptSelf(nums);

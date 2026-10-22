@@ -1,8 +1,11 @@
 package medium.ex01_lru_cache;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class LRUCacheTest {
+    @Test
     public void testCacheOperations() {
         LRUCache lRUCache = new LRUCache(2);
         lRUCache.put(1, 1);
@@ -16,6 +19,7 @@ public class LRUCacheTest {
         TestRunner.assertEquals(4, lRUCache.get(4)); // returns 4
     }
 
+    @Test
     public void testUpdateExistingKey() {
         LRUCache cache = new LRUCache(2);
         cache.put(1, 10);
@@ -27,6 +31,7 @@ public class LRUCacheTest {
         TestRunner.assertEquals(15, cache.get(1));
     }
 
+    @Test
     public void testInvalidCapacity() {
         try {
             new LRUCache(0);

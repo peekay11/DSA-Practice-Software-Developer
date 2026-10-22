@@ -1,8 +1,11 @@
 package assessments.assessment04_fraud_detection_sliding_window;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class FraudDetectorTest {
+    @Test
     public void testDetectionWindow() {
         FraudDetector detector = new FraudDetector(3, 1000L); // Max 3 per 1000ms
 

@@ -1,20 +1,25 @@
 package hard.ex02_median_two_sorted_arrays;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class MedianTwoSortedArraysTest {
+    @Test
     public void testOddCombined() {
         int[] n1 = {1, 3};
         int[] n2 = {2};
         TestRunner.assertEquals(2.0, MedianTwoSortedArrays.findMedianSortedArrays(n1, n2), 1e-5, "Median odd");
     }
 
+    @Test
     public void testEvenCombined() {
         int[] n1 = {1, 2};
         int[] n2 = {3, 4};
         TestRunner.assertEquals(2.5, MedianTwoSortedArrays.findMedianSortedArrays(n1, n2), 1e-5, "Median even");
     }
 
+    @Test
     public void testOneEmpty() {
         int[] n1 = {};
         int[] n2 = {1};

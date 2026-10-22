@@ -1,8 +1,11 @@
 package hard.ex07_n_queens;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class NQueensTest {
+    @Test
     public void testCases() {
         TestRunner.assertEquals(1, NQueens.totalNQueens(1));
         TestRunner.assertEquals(0, NQueens.totalNQueens(2));

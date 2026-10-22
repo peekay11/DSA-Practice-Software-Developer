@@ -1,8 +1,11 @@
 package easy.ex12_climbing_stairs;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class ClimbingStairsTest {
+    @Test
     public void testValues() {
         TestRunner.assertEquals(1, ClimbingStairs.climbStairs(1));
         TestRunner.assertEquals(2, ClimbingStairs.climbStairs(2));
@@ -11,6 +14,7 @@ public class ClimbingStairsTest {
         TestRunner.assertEquals(8, ClimbingStairs.climbStairs(5));
     }
 
+    @Test
     public void testNonPositiveThrows() {
         try {
             ClimbingStairs.climbStairs(0);

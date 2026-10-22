@@ -1,8 +1,11 @@
 package hard.ex04_sliding_window_maximum;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class SlidingWindowMaximumTest {
+    @Test
     public void testWindowMax() {
         int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
         int[] res = SlidingWindowMaximum.maxSlidingWindow(nums, 3);
@@ -13,6 +16,7 @@ public class SlidingWindowMaximumTest {
         }
     }
 
+    @Test
     public void testSingleElementWindow() {
         int[] nums = {1, -1};
         int[] res = SlidingWindowMaximum.maxSlidingWindow(nums, 1);

@@ -30,17 +30,27 @@ java_prep_mastery/
 
 ---
 
-## 🚀 How to Run Tests Offline (Zero Internet Needed)
+## 🚀 How to Run Tests
 
-You do **not** need internet, Maven downloads, or external dependencies.
+### 1. In IDE (IntelliJ IDEA, VS Code, Eclipse GUI)
+All test files are equipped with standard `@Test` (JUnit 5 / Jupiter) annotations with local bundled jars in `lib/`.
+- Open any `*Test.java` file in IntelliJ IDEA or VS Code.
+- Click the green **Play / Run ▶** button directly next to the test class or test method to run in the GUI test runner window.
+- Or right-click any package or test directory and select **"Run 'Tests in...'"**.
+
+### 2. Via Maven CLI or IDE Maven Tool Window
+- Run all tests: `mvn test`
+- Run a specific test class: `mvn test -Dtest=TwoSumTest`
+
+### 3. Offline Script (Zero Setup / Zero Internet Needed)
 A lightweight runner is included right inside `src/testrunner/TestRunner.java`.
 
-### Run All Tests:
+#### Run All Tests:
 ```bash
 ./run_tests.sh
 ```
 
-### Run a Specific Test Class:
+#### Run a Specific Test Class:
 ```bash
 ./run_tests.sh easy.ex01_two_sum.TwoSumTest
 ./run_tests.sh medium.ex01_lru_cache.LRUCacheTest

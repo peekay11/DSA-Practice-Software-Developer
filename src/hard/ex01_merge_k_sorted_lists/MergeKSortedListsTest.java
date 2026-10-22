@@ -1,9 +1,12 @@
 package hard.ex01_merge_k_sorted_lists;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 import hard.ex01_merge_k_sorted_lists.MergeKSortedLists.ListNode;
 
 public class MergeKSortedListsTest {
+    @Test
     public void testMergeThreeLists() {
         ListNode l1 = new ListNode(1, new ListNode(4, new ListNode(5)));
         ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
@@ -20,6 +23,7 @@ public class MergeKSortedListsTest {
         TestRunner.assertNull(cur);
     }
 
+    @Test
     public void testEmptyOrNull() {
         TestRunner.assertNull(MergeKSortedLists.mergeKLists(new ListNode[]{}));
         TestRunner.assertNull(MergeKSortedLists.mergeKLists(null));

@@ -1,9 +1,12 @@
 package easy.ex04_merge_sorted_lists;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 import easy.ex04_merge_sorted_lists.MergeSortedLists.ListNode;
 
 public class MergeSortedListsTest {
+    @Test
     public void testMergeBothPresent() {
         ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
@@ -19,6 +22,7 @@ public class MergeSortedListsTest {
         TestRunner.assertNull(cur);
     }
 
+    @Test
     public void testOneNull() {
         ListNode l1 = new ListNode(10);
         TestRunner.assertEquals(10, MergeSortedLists.mergeTwoLists(l1, null).val);

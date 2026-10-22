@@ -1,8 +1,11 @@
 package medium.ex07_task_scheduler;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 
 public class TaskSchedulerTest {
+    @Test
     public void testScheduler() {
         char[] tasks1 = {'A', 'A', 'A', 'B', 'B', 'B'};
         TestRunner.assertEquals(8, TaskScheduler.leastInterval(tasks1, 2));

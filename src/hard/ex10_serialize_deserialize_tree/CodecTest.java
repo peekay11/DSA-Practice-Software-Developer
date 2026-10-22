@@ -1,9 +1,12 @@
 package hard.ex10_serialize_deserialize_tree;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 import hard.ex10_serialize_deserialize_tree.Codec.TreeNode;
 
 public class CodecTest {
+    @Test
     public void testRoundtrip() {
         Codec codec = new Codec();
         TreeNode root = new TreeNode(1,
@@ -20,6 +23,7 @@ public class CodecTest {
         TestRunner.assertEquals(5, recovered.right.right.val);
     }
 
+    @Test
     public void testNullTree() {
         Codec codec = new Codec();
         TestRunner.assertNull(codec.deserialize(codec.serialize(null)));

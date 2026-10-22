@@ -1,9 +1,12 @@
 package assessments.assessment01_greenfield_trade_ledger;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 import java.util.List;
 
 public class TradeOrderBookTest {
+    @Test
     public void testMatchingLogic() {
         TradeOrderBook book = new TradeOrderBook();
         
@@ -24,6 +27,7 @@ public class TradeOrderBookTest {
         TestRunner.assertNull(book.getBestBid(), "Buy fully filled");
     }
 
+    @Test
     public void testDefensiveValidation() {
         TradeOrderBook book = new TradeOrderBook();
         try {

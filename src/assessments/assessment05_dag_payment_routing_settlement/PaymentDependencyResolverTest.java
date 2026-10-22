@@ -1,10 +1,13 @@
 package assessments.assessment05_dag_payment_routing_settlement;
 
+import org.junit.jupiter.api.Test;
+
 import testrunner.TestRunner;
 import java.util.Arrays;
 import java.util.List;
 
 public class PaymentDependencyResolverTest {
+    @Test
     public void testValidDAG() {
         List<String> transfers = Arrays.asList("TX1", "TX2", "TX3");
         List<String[]> deps = Arrays.asList(
@@ -18,6 +21,7 @@ public class PaymentDependencyResolverTest {
         TestRunner.assertEquals("TX3", order.get(2));
     }
 
+    @Test
     public void testCyclicDeadlock() {
         List<String> transfers = Arrays.asList("TXA", "TXB");
         List<String[]> deps = Arrays.asList(

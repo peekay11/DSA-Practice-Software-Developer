@@ -15,3 +15,16 @@ Implement `TradeOrderBook` supporting:
 ### Defensive & Reliability Requirements
 - Throw `IllegalArgumentException` on null orders or non-positive price/quantity.
 - High-efficiency priority matching ($O(\log N)$ per insertion/fill).
+
+### Examples (LeetCode Style)
+
+**Example 1:**
+```text
+Input Orders:
+1. BUY order (maker): price = 150.0, qty = 10
+2. SELL order (taker): price = 150.0, qty = 4
+
+Execution Output:
+- TradeExecution: price = 150.0, qty = 4
+- Remaining in OrderBook: BUY order with qty = 6 at price 150.0
+```
